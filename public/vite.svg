@@ -1,8 +1,0 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#0b1020"/>
-  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#ffd56a" stroke-width="2"/>
-  <text x="600" y="260" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="48" font-weight="800" fill="#fafafa">Khodor El Hajj Moussa</text>
-  <text x="600" y="320" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="24" fill="#ffd56a">Full-Stack Developer | 3D Portfolio</text>
-  <text x="600" y="360" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="18" fill="#e4e4e7">React  Next.js  TypeScript  FastAPI  PostgreSQL  Docker</text>
-  <text x="600" y="540" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="16" fill="#d4d4d8">khodorrdev.shop</text>
-</svg>

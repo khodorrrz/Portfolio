@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /argus-reports/
+Disallow: /_archive/
+Disallow: /.serena/
+Disallow: /.git/
+
+Sitemap: https://portfolio-omega-gules-27.vercel.app/sitemap.xml

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 354">
+  <rect width="880" height="354" fill="#141113"/>
+  <g fill="#21191b" stroke="#62483f">
+    <rect x="24" y="57" width="248" height="193"/>
+    <rect x="316" y="57" width="248" height="193"/>
+    <rect x="608" y="57" width="248" height="193"/>
+  </g>
+  <g fill="none" stroke="#e09a75" stroke-width="2">
+    <path d="M24 57h248m44 0h248m44 0h248"/>
+    <path d="M279 153h30m-6-5 6 5-6 5m268-5h30m-6-5 6 5-6 5"/>
+    <path d="M732 250v18H148v18m292-18v18m292-18v18"/>
+  </g>
+  <g font-family="system-ui,sans-serif">
+    <text x="24" y="31" fill="#dda88d" font-size="15" font-weight="700" letter-spacing="2">SECURITY AGENT / 22-PHASE PIPELINE</text>
+    <g fill="#fff0e8" font-size="24" font-weight="720">
+      <text x="42" y="92">Discovery</text><text x="334" y="92">Verification</text><text x="626" y="92">Reporting</text>
+    </g>
+    <g fill="#d5a58b" font-size="14">
+      <text x="42" y="116">12 phases</text><text x="334" y="116">6 phases</text><text x="626" y="116">4 phases</text>
+    </g>
+    <g fill="#fae8dd" font-size="17" font-weight="630">
+      <text x="42" y="153">01  Inventory</text><text x="42" y="185">02  Find candidates</text>
+      <text x="334" y="153">03  Trace reachability</text><text x="334" y="185">04  Blind review</text>
+      <text x="626" y="153">05  Reconcile ledger</text><text x="626" y="185">06  Derive report</text>
+    </g>
+    <text x="334" y="222" fill="#dfb39d" font-size="14">Live checks require authorization</text>
+    <g fill="#2a2022" stroke="#8c6350">
+      <rect x="24" y="287" width="248" height="41"/><rect x="316" y="287" width="248" height="41"/><rect x="608" y="287" width="248" height="41"/>
+    </g>
+    <g fill="#f8e7db" font-size="16" font-weight="650" text-anchor="middle">
+      <text x="148" y="313">Finding counted</text><text x="440" y="313">No finding counted</text><text x="732" y="313">Held for adjudication</text>
+    </g>
+  </g>
+</svg>
