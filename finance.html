@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Track spending across USD and LBP. A project by Khodor El Hajj Moussa.">
+  <title>LiraTrack | Khodor El Hajj Moussa</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/finance.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="LiraTrack | Khodor El Hajj Moussa">
+  <meta property="og:description" content="Track spending across USD and LBP. A project by Khodor El Hajj Moussa.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/finance.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/finance.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LiraTrack personal finance app case study">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LiraTrack | Khodor El Hajj Moussa">
+  <meta name="twitter:description" content="Track spending across USD and LBP. A project by Khodor El Hajj Moussa.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/finance.jpg">
+  <meta name="twitter:image:alt" content="LiraTrack personal finance app case study">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="page-back.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">All work</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell case-layout">
+    <header class="case-intro"><h1>LiraTrack<span>.</span></h1><p class="role">Full-stack product</p><p class="case-hook">Track spending across USD and LBP</p><p>I built a bilingual personal finance app for Lebanese spending habits, including mixed-currency wallets, receipt OCR and SMS transaction drafts.</p><p><a href="https://github.com/khodorrrz/Lebanese_Finance_Tracker">View source on GitHub</a></p></header>
+    <section class="artifact">
+      <h2>A receipt becomes a transaction</h2>
+      <figure class="case-screen sync-architecture"><div class="case-frame"><a href="assets/cases/finance-review.webp"><img src="assets/cases/finance-review.webp" width="1330" height="820" loading="lazy" alt="LiraTrack review workspace showing an LBP grocery receipt beside the transaction form."></a></div><figcaption>Screenshot from the running LiraTrack frontend with sample transactions.</figcaption></figure>
+      <figure class="specimen">
+        <figcaption>Illustrative transaction draft · sample values</figcaption>
+        <dl class="draft"><div><dt>Amount</dt><dd>450,000 LBP</dd></div><div><dt>Source</dt><dd>Receipt scan</dd></div><div><dt>Wallet</dt><dd>Needs confirmation</dd></div><div><dt>State</dt><dd>Pending review</dd></div></dl>
+      </figure>
+
+      <p class="artifact-label">Architecture walkthrough</p>
+      <div class="artifact-steps"><article class="artifact-step"><h3><span>01</span>Capture</h3><p>Upload a receipt or supply a transaction SMS.</p></article>
+      <article class="artifact-step"><h3><span>02</span>Extract</h3><p>Read the amount and other fields into a draft.</p></article>
+      <article class="artifact-step"><h3><span>03</span>Review</h3><p>Confirm currency, wallet and category before saving.</p></article>
+      <article class="artifact-step"><h3><span>04</span>Record</h3><p>Add the reviewed transaction to wallet history.</p></article></div>
+    </section>
+    <section class="case-decision"><h2>Engineering notes</h2><p>A review queue gives users a chance to check imported amounts and categories before committing them. Reporting keeps currency and exchange-rate context visible.</p></section>
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to all work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400">
+<defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#ef9359" stroke-opacity=".24"/></pattern></defs>
+<rect width="720" height="400" fill="#211d1a"/><rect width="720" height="400" fill="url(#grid)"/>
+<g fill="none" stroke="#ef9359" stroke-width="2"><path d="M212 195h94m107 0h94M540 255v35H175v-35" stroke-dasharray="5 7"/><path d="m295 189 11 6-11 6m202-12 10 6-10 6m-311 83-11 6 11 6"/></g>
+<g stroke="#ef9359" stroke-width="2"><path d="M105 134v88c0 13 24 24 70 24s70-11 70-24v-88" fill="#7f5136"/><ellipse cx="175" cy="134" rx="70" ry="24" fill="#7f5136"/><path d="M105 167c0 13 24 24 70 24s70-11 70-24m-140 27c0 13 24 24 70 24s70-11 70-24" fill="none"/><path d="M475 134v88c0 13 24 24 70 24s70-11 70-24v-88" fill="#7f5136"/><ellipse cx="545" cy="134" rx="70" ry="24" fill="#7f5136"/><path d="M475 167c0 13 24 24 70 24s70-11 70-24m-140 27c0 13 24 24 70 24s70-11 70-24" fill="none"/><rect x="307" y="153" width="106" height="84" rx="8" fill="#211d1a"/></g>
+<g fill="#ef9359"><circle cx="279" cy="195" r="5"/><circle cx="438" cy="195" r="5"/><path d="m346 180 27 15-27 15z"/></g>
+<g font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#f1e9e0" text-anchor="middle"><text x="175" y="86">Cloud PostgreSQL</text><text x="360" y="270">VB.NET syncher</text><text x="545" y="86">Local SQL Anywhere</text></g>
+<g font-family="monospace" font-size="12" fill="#ef9359" letter-spacing="1.4"><text x="34" y="38">LIVESYNCHER / IMPORT PATH</text><text x="360" y="322" text-anchor="middle">ACKNOWLEDGE AFTER APPLY</text><text x="34" y="365">ARCHITECTURE ILLUSTRATION</text></g></svg>

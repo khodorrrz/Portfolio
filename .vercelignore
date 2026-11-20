@@ -1,0 +1,9 @@
+.serena/
+.playwright-mcp/
+argus-reports/
+_archive/
+tests/
+DESIGN.md
+PRODUCT.md
+README.md
+.gitignore

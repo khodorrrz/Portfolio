@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Barberous, a bilingual barbershop site built by Khodor El Hajj Moussa.">
+  <title>Barberous | Khodor El Hajj Moussa</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/barberous.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="Barberous | Khodor El Hajj Moussa">
+  <meta property="og:description" content="Barberous, a bilingual barbershop site built by Khodor El Hajj Moussa.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/barberous.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/barberous.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Barberous bilingual mobile site case study">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Barberous | Khodor El Hajj Moussa">
+  <meta name="twitter:description" content="Barberous, a bilingual barbershop site built by Khodor El Hajj Moussa.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/barberous.jpg">
+  <meta name="twitter:image:alt" content="Barberous bilingual mobile site case study">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="case-exhibits.js" defer></script>
+  <script src="page-back.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">All work</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell case-layout">
+    <header class="case-intro"><h1>Barberous<span>.</span></h1><p class="role">Freelance web development · Local search</p><p class="case-hook">A bilingual site for a local barbershop</p><p>I built the site for a shop in Hadat, Lebanon. Customers can browse services in English or Arabic and request an appointment through WhatsApp.</p><p><a href="https://barberous.pages.dev/">Visit Barberous</a></p></header>
+    <section class="artifact" aria-labelledby="barber-title">
+      <h2 id="barber-title">The booking path in two languages</h2>
+      <div class="case-exhibit" data-exhibit>
+        <div class="case-controls" role="group" aria-label="Exhibit views" hidden>
+          <button type="button" aria-controls="barber-view-0" aria-pressed="true">English</button>
+          <button type="button" aria-controls="barber-view-1" aria-pressed="false">Arabic</button>
+        </div>
+        <p class="sr-only" role="status"></p>
+        <figure class="case-view " id="barber-view-0">
+          <div class="case-frame"><div class="barber-stage">
+              <div><h3>English mobile site</h3><p>The landing page brings the location, services, and WhatsApp appointment link together.</p></div>
+              <div class="barber-phone"><img src="assets/cases/barber-en.webp" alt="Barberous English mobile homepage with the booking button on the left." width="618" height="1110" loading="lazy"></div>
+            </div></div>
+          <figcaption>Mobile screenshot from the Barberous project.</figcaption>
+        </figure>
+        <figure class="case-view " id="barber-view-1">
+          <div class="case-frame"><div class="barber-stage">
+              <div><h3>Arabic mobile site</h3><p>The Arabic version mirrors the navigation and booking flow for right-to-left reading.</p></div>
+              <div class="barber-phone"><img src="assets/cases/barber-ar.webp" alt="Barberous Arabic mobile homepage with right-to-left layout and booking button on the right." width="618" height="1110" loading="lazy"></div>
+            </div></div>
+          <figcaption>Mobile screenshot from the Barberous project.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="case-decision"><h2>Engineering notes</h2><p>Each service has a page in both languages. Canonical URLs, language alternates, a sitemap, and LocalBusiness structured data help search engines understand the site. The booking link sends customers to the shop’s WhatsApp.</p></section>
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to all work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recognize hand gestures in a live camera stream. A project by Khodor El Hajj Moussa.">
+  <title>ASL Translator | Khodor El Hajj Moussa</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/asl.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="ASL Translator | Khodor El Hajj Moussa">
+  <meta property="og:description" content="Recognize hand gestures in a live camera stream. A project by Khodor El Hajj Moussa.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/asl.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/asl.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ASL Translator case study">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASL Translator | Khodor El Hajj Moussa">
+  <meta name="twitter:description" content="Recognize hand gestures in a live camera stream. A project by Khodor El Hajj Moussa.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/asl.jpg">
+  <meta name="twitter:image:alt" content="ASL Translator case study">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="case-exhibits.js" defer></script>
+  <script src="site-motion.js" defer></script>
+  <script src="page-back.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">All work</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell case-layout">
+    <header class="case-intro"><h1>ASL Translator<span>.</span></h1><p class="role">Machine learning</p><p class="case-hook">Recognize hand gestures in a live camera stream</p><p>This application translates a supported set of ASL gestures into text, with separate modes for fingerspelling and dynamic words.</p></header>
+    <section class="artifact asl-artifact">
+      <h2>Gesture recognition in motion</h2>
+      <div class="case-exhibit" data-exhibit>
+        <div class="asl-controls"><div class="case-controls" role="group" aria-label="Exhibit views" hidden>
+          <button type="button" aria-controls="asl-view-0" aria-pressed="true">Fingerspelling</button>
+          <button type="button" aria-controls="asl-view-1" aria-pressed="false">Dynamic words</button>
+        </div>
+        <button type="button" class="loop-motion" hidden>Pause animation</button></div>
+        <p class="sr-only" role="status"></p>
+        <figure class="case-view " id="asl-view-0">
+          <div class="case-frame"><img src="assets/cases/asl-alphabet.webp" data-poster="assets/cases/asl-alphabet.webp" data-loop="assets/cases/asl-alphabet-anim.webp" width="448" height="252" alt="Fingerspelling demo. A camera view and recognition interface show a sequence of letters."></div>
+          <figcaption>Original recording. The static mode recognizes supported letters from hand landmarks and uses consistency across frames before committing a prediction.</figcaption>
+        </figure>
+        <figure class="case-view " id="asl-view-1">
+          <div class="case-frame"><img src="assets/cases/asl-word.webp" data-poster="assets/cases/asl-word.webp" data-loop="assets/cases/asl-word-anim.webp" width="448" height="252" alt="Dynamic word demo. The recognition interface tracks a moving hand gesture and displays its prediction."></div>
+          <figcaption>Original recording from the ASL project. Dynamic mode classifies a sequence of hand landmarks for a supported word.</figcaption>
+        </figure>
+      </div>
+      <p class="artifact-label">Architecture walkthrough</p>
+      <div class="artifact-steps"><article class="artifact-step"><h3><span>01</span>Capture</h3><p>Camera frames reach the FastAPI service over WebSockets.</p></article>
+      <article class="artifact-step"><h3><span>02</span>Track</h3><p>MediaPipe extracts the hand landmarks.</p></article>
+      <article class="artifact-step"><h3><span>03</span>Classify</h3><p>A static or sequence model predicts a supported gesture.</p></article>
+      <article class="artifact-step"><h3><span>04</span>Stabilize</h3><p>The interface uses multi-frame consistency before updating the text.</p></article></div>
+    </section>
+    <section class="case-decision"><h2>Engineering notes</h2><p>MediaPipe extracts 21 hand landmarks. Static recognition uses an ONNX classifier, while the dynamic mode classifies sequences with an LSTM. Multi-frame consistency helps stabilize output.</p></section>
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to all work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>
