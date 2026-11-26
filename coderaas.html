@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Full-stack, DevOps, and security work at Coderaas. A case study by Khodor El Hajj Moussa.">
+  <title>Coderaas | Full-Stack, DevOps & Security</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/coderaas.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="Coderaas | Full-Stack, DevOps & Security">
+  <meta property="og:description" content="Full-stack, DevOps, and security work at Coderaas. A case study by Khodor El Hajj Moussa.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/coderaas.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/coderaas.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Coderaas platform case study">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coderaas | Full-Stack, DevOps & Security">
+  <meta name="twitter:description" content="Full-stack, DevOps, and security work at Coderaas. A case study by Khodor El Hajj Moussa.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/coderaas.jpg">
+  <meta name="twitter:image:alt" content="Coderaas platform case study">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="sync-demo.js" defer></script>
+  <script src="page-back.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">All work</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell case-layout">
+    <header class="case-intro">
+      <h1>Coderaas<span>.</span></h1>
+      <p class="role">Full Stack Developer · May 2025 – Present</p>
+      <p class="case-hook">Modernizing a legacy point-of-sale platform</p>
+      <p>I build and maintain React and Express features for a web platform that modernized a legacy VB6 point-of-sale system. My work covers frontend performance, API caching, Prisma queries, production access control, Docker and AWS deployments, CI security, and application security. I also worked on LiveSyncher, the Windows app that keeps cloud and local data in sync.</p>
+      <nav class="case-jump" aria-label="On this page"><a href="#optimization">Full-stack web work</a><a href="#devops">DevOps &amp; security</a><a href="#sync-title">LiveSyncher detail</a></nav>
+    </header>
+    <section class="artifact artifact--wide-media" id="optimization" aria-labelledby="optimization-title">
+      <h2 id="optimization-title">Full-stack work on the web platform</h2>
+      <ol class="process-strip optimization-strip">
+        <li><h3>React frontend</h3><p>Maintained UI features, split vendor chunks, and lazy-loaded routes. The sidebar and header share a cached master-menu response.</p></li>
+        <li><h3>Express APIs</h3><p>Cached GET responses by tenant and session, invalidated affected entries after writes, and added caching for the report tree.</p></li>
+        <li><h3>Data and access</h3><p>Optimized Prisma queries and indexed merchant and user scope lookups for branch and concept permissions. Addressed production access-control issues.</p></li>
+      </ol>
+      <figure class="case-screen sync-architecture">
+        <div class="case-frame"><img src="assets/cases/coderaas-platform.svg" width="720" height="400" loading="lazy" alt="Coderaas platform: a React frontend calls Express APIs, which use tenant caching, access control, and a Prisma data layer over PostgreSQL."></div>
+        <figcaption>Platform boundaries for the merchant web application. The legacy POS integration and LiveSyncher sit behind the Express API layer.</figcaption>
+      </figure>
+      <figure class="performance-figure">
+        <figcaption><strong>Main JavaScript bundle</strong><span>Build comparison recorded in the performance commit</span></figcaption>
+        <dl class="performance-bars">
+          <div><dt>Before splitting</dt><dd><span class="performance-track" aria-hidden="true"><i></i></span><strong>3.8 MB</strong></dd></div>
+          <div><dt>After splitting</dt><dd><span class="performance-track performance-after" aria-hidden="true"><i></i></span><strong>1.7 MB</strong></dd></div>
+        </dl>
+      </figure>
+    </section>
+
+    <section class="artifact" id="devops" aria-labelledby="devops-title">
+      <h2 id="devops-title">DevOps and security work</h2>
+      <p class="artifact-lede">The same platform, operated and hardened: containers, staging deployments, CI security, database reliability, and the authorization fixes that production exposed.</p>
+      <ol class="process-strip">
+        <li><h3>Containers &amp; cloud</h3><p>Hardened the Docker image, excluded secrets from the build context, patched vulnerable dependencies, and supported staging deployments on AWS Elastic Beanstalk. Managed PostgreSQL backups/restores and enforced RDS TLS.</p></li>
+        <li><h3>CI security</h3><p>Built a security-analysis agent into the CI pipeline as a gate, added 76 test files, and moved committed database, JWT, SQS, and logging credentials to EB environment properties/SSM.</p></li>
+        <li><h3>Application security</h3><p>Fixed cross-tenant login, unsafe token minting, token forgery, broken RBAC, arbitrary password reset, exposed routes, missing security headers, and mass-assignment flaws across BimCloud, IFPC TaskLogger, and client projects.</p></li>
+        <li><h3>Reliability</h3><p>Cut API-heavy page load from ~10s to 2–3s by caching GET responses per tenant, deduplicating in-flight calls, and batching boot fetches; fixed Redis crash/hang paths and bounded caches.</p></li>
+      </ol>
+      <figure class="specimen">
+        <figcaption>API-heavy page load · production symptom</figcaption>
+        <dl class="draft"><div><dt>Before</dt><dd>~10s</dd></div><div><dt>After</dt><dd>2–3s</dd></div></dl>
+      </figure>
+    </section>
+
+    <section class="artifact artifact--secondary" aria-labelledby="sync-title">
+      <h2 id="sync-title">Supporting system: LiveSyncher</h2>
+      <p class="artifact-lede">One Windows subsystem inside the Coderaas platform. It keeps cloud and local records in sync.</p>
+      <div class="sync-layout"><figure class="case-screen sync-architecture"><div class="case-frame"><img src="assets/cases/sync-flow.svg" width="720" height="400" alt="Cloud PostgreSQL sends changes to the VB.NET syncher, which applies them to local SQL Anywhere and acknowledges them."></div><figcaption>Architecture illustration based on the source. The demo below uses sample data.</figcaption></figure>
+      <div class="sync-demo" data-phase="idle">
+        <h3>Follow a sample price update</h3>
+        <div class="sync-nodes">
+          <div><small>Cloud PostgreSQL</small><strong>$2.75</strong><span>New sample price</span></div>
+          <div><small>VB.NET syncher</small><strong id="sync-stage">Idle</strong><span>Local staging queue</span></div>
+          <div><small>Local SQL Anywhere</small><strong id="sync-price">$2.50</strong><span>Price in the local record</span></div>
+        </div>
+        <div class="sync-rail" aria-hidden="true"><i></i></div>
+        <p id="sync-status" role="status">Sample event 1042 is waiting to be sent.</p>
+        <div class="case-controls sync-actions">
+          <button type="button" id="sync-next">Receive event</button>
+        </div>
+      </div>
+      </div>
+      <div class="artifact-steps">
+        <article class="artifact-step"><h3><span>01</span>Receive</h3><p>The Windows app receives a cloud change over a server-sent event stream and records it in the local staging queue.</p></article>
+        <article class="artifact-step"><h3><span>02</span>Apply</h3><p>The client maps the incoming change to the legacy schema and executes the local write.</p></article>
+        <article class="artifact-step"><h3><span>03</span>Acknowledge</h3><p>After a successful local apply, the client acknowledges the event. Failed acknowledgments can be retried.</p></article>
+      </div>
+      <details class="sync-setup-note"><summary>View the Windows setup wizard</summary>
+      <figure class="archive-image sync-setup"><a href="assets/cases/syncher-setup.webp"><img src="assets/cases/syncher-setup.webp" width="666" height="609" loading="lazy" alt="LiveSyncher setup wizard welcome screen describing the cloud and local database prerequisites."></a><figcaption>Actual Windows setup wizard. This screen precedes entering connection settings.</figcaption></figure>
+      </details>
+    </section>
+
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to all work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>

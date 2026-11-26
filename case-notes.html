@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Engineering case notes on API performance, multi-tenant RAG and security verification.">
+  <title>Engineering Field Notes | Khodor El Hajj Moussa</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/case-notes.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="Engineering Field Notes | Khodor El Hajj Moussa">
+  <meta property="og:description" content="Engineering case notes on API performance, multi-tenant RAG and security verification.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/case-notes.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og-card.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Khodor El Hajj Moussa's portfolio landing screen">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Engineering Field Notes | Khodor El Hajj Moussa">
+  <meta name="twitter:description" content="Engineering case notes on API performance, multi-tenant RAG and security verification.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og-card.jpg">
+  <meta name="twitter:image:alt" content="Khodor El Hajj Moussa's portfolio landing screen">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="page-back.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">Work</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell notes">
+    <h1>Engineering Field Notes<span>.</span></h1>
+    <article id="coderaas">
+      <h2>Coderaas</h2>
+      <p class="role">Full Stack Developer · May 2025 – Present</p>
+      <p><strong>Result:</strong> Cut API-heavy page load from ~10s to 2–3s, added a security-analysis gate to CI, and fixed production access-control issues.</p>
+      <p>I build React and Express features, REST APIs, and database changes, and helped modernize a legacy VB6 point-of-sale application. I also hardened the Docker image, supported staging deployments on AWS Elastic Beanstalk, managed PostgreSQL backups/restores, removed committed credentials, enforced RDS TLS, and added test coverage.</p>
+    </article>
+    <article id="rag">
+      <h2>Multi-Tenant RAG Platform</h2>
+      <p class="role">Personal project · Full-stack development</p>
+      <p><strong>Result:</strong> Built a PDF question-answering app with React and FastAPI, using hybrid retrieval and reranking to surface relevant passages.</p>
+      <p>Tenant isolation keeps document access scoped to the right tenant. The app uses JWT authentication, Redis jobs, and Docker.</p>
+      <div class="evidence">
+        <figure><a href="rag-index.webp"><img src="rag-index.webp" width="1481" height="739" alt="Document library showing a PDF ready after indexing" loading="lazy"></a><figcaption>01 / Upload a PDF and confirm it’s indexed.</figcaption></figure>
+        <figure><a href="rag-answer.webp"><img src="rag-answer.webp" width="1471" height="743" alt="Document chat showing an answer and links to source passages" loading="lazy"></a><figcaption>02 / Ask a question and inspect the source passages.</figcaption></figure>
+      </div>
+      <a href="https://github.com/khodorrrz/Rag-System">View source on GitHub</a>
+    </article>
+    <article id="security">
+      <h2>Security Agent</h2>
+      <p class="role">Personal project · Security tooling</p>
+      <p><strong>Result:</strong> Built an automated workflow that produces evidence-based security reports.</p>
+      <p>The tool chains static analysis, attack modeling and vulnerability verification. Reachability analysis helps determine which paths can be exercised, and OWASP ASVS mapping connects findings to relevant security requirements.</p>
+    </article>
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to selected work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>

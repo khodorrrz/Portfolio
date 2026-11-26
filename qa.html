@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate browser tests from how an app actually works. A project by Khodor El Hajj Moussa.">
+  <title>QA Orchestrator | Khodor El Hajj Moussa</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/qa.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="QA Orchestrator | Khodor El Hajj Moussa">
+  <meta property="og:description" content="Generate browser tests from how an app actually works. A project by Khodor El Hajj Moussa.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/qa.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/qa.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="QA Orchestrator case study">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="QA Orchestrator | Khodor El Hajj Moussa">
+  <meta name="twitter:description" content="Generate browser tests from how an app actually works. A project by Khodor El Hajj Moussa.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/qa.jpg">
+  <meta name="twitter:image:alt" content="QA Orchestrator case study">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="page-back.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">All work</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell case-layout">
+    <header class="case-intro"><h1>QA Orchestrator<span>.</span></h1><p class="role">Developer tooling</p><p class="case-hook">Generate browser tests from how an app actually works</p><p>The orchestrator reads application source, derives scenarios for pages and roles, drives a browser, and records evidence in a structured ledger.</p></header>
+    <section class="artifact">
+      <h2>Anatomy of an audit</h2>
+      <figure class="case-screen sync-architecture"><div class="case-frame"><img src="assets/cases/qa-flow.svg" width="720" height="400" loading="lazy" alt="Source analysis identifies routes and roles, which guide browser tests. The browser results feed the ledger."></div><figcaption>Workflow diagram based on source discovery, browser exploration, and reporting.</figcaption></figure>
+      <figure class="specimen">
+        <figcaption>Illustrative ledger entry · role boundary</figcaption>
+        <dl class="draft"><div><dt>Scenario</dt><dd>Open a staff-only page</dd></div><div><dt>Role</dt><dd>Standard user</dd></div><div><dt>Expected</dt><dd>Access denied</dd></div><div><dt>Evidence to collect</dt><dd>Browser state and API response</dd></div></dl>
+      </figure>
+
+      <p class="artifact-label">Architecture walkthrough</p>
+      <div class="artifact-steps"><article class="artifact-step"><h3><span>01</span>Read source</h3><p>Build a graph of routes, components, API contracts and auth.</p></article>
+      <article class="artifact-step"><h3><span>02</span>Plan</h3><p>Select scenarios for each relevant page and role.</p></article>
+      <article class="artifact-step"><h3><span>03</span>Exercise</h3><p>Drive the real application and record outcomes with evidence.</p></article>
+      <article class="artifact-step"><h3><span>04</span>Deliver</h3><p>Generate regression tests and a report from the ledger.</p></article></div>
+    </section>
+    <section class="case-decision"><h2>Engineering notes</h2><p>Source discovery provides routes, contracts and authorization context. Browser exploration supplies observations. Reporting derives from the ledger, and passing scenarios can become Playwright regression tests.</p></section>
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to all work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>

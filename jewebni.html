@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI-assisted ordering and merchant operations. A case study from Khodor El Hajj Moussa’s time at Sync.">
+  <title>Jewebni | Khodor El Hajj Moussa</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/jewebni.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="Jewebni | Khodor El Hajj Moussa">
+  <meta property="og:description" content="AI-assisted ordering and merchant operations. A case study from Khodor El Hajj Moussa’s time at Sync.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/jewebni.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/jewebni.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jewebni customer experience case study">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jewebni | Khodor El Hajj Moussa">
+  <meta name="twitter:description" content="AI-assisted ordering and merchant operations. A case study from Khodor El Hajj Moussa’s time at Sync.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/jewebni.jpg">
+  <meta name="twitter:image:alt" content="Jewebni customer experience case study">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="case-exhibits.js" defer></script>
+  <script src="page-back.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">All work</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell case-layout">
+    <header class="case-intro"><h1>Jewebni<span>.</span></h1><p class="role">Sync · Full Stack Developer (Project-Based) · Nov 2024 – Jan 2025</p><p class="case-hook">From a business’s catalog to a customer order</p><p>At Sync, I worked on Jewebni, an AI-assisted platform for customer conversations, ordering, and merchant operations. My work included order and inventory workflows, pricing, returns, voice integration, and delivery calculations. I added Redis caching and guardrails to cut redundant model calls, plus security controls and automated tests.</p></header>
+    <section class="artifact artifact--wide-media" aria-labelledby="jewebni-ui">
+      <h2 id="jewebni-ui">The customer experience</h2>
+      <div class="case-exhibit" data-exhibit>
+        <div class="case-controls" role="group" aria-label="Screenshots" hidden>
+          <button type="button" aria-controls="jewebni-view-0" aria-pressed="true">Customer site</button>
+          <button type="button" aria-controls="jewebni-view-1" aria-pressed="false">Order review</button>
+        </div>
+        <p class="sr-only" role="status"></p>
+        <figure class="case-view case-screen" id="jewebni-view-0">
+          <div class="case-frame"><a href="assets/cases/jewebni-home.webp"><img src="assets/cases/jewebni-home.webp" width="1035" height="638" loading="lazy" alt="Jewebni’s landing page with an illustrated conversation and order summary"></a></div>
+          <figcaption>Actual capture of the customer site. The landing page introduces the assistant through an example conversation and order.</figcaption>
+        </figure>
+        <figure class="case-view case-screen" id="jewebni-view-1">
+          <div class="case-frame"><a href="assets/cases/jewebni-order.webp"><img src="assets/cases/jewebni-order.webp" width="1038" height="638" loading="lazy" alt="Jewebni order recap showing a sample cart and its total"></a></div>
+          <figcaption>Actual capture of the order-review interface with sample data. The customer can see the cart and total before confirming.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="case-decision" aria-labelledby="jewebni-flow">
+      <h2 id="jewebni-flow">How an order moves through Jewebni</h2>
+      <ol class="process-strip">
+        <li><h3>Import business knowledge</h3><p>Menus, documents, and website content populate the merchant’s catalog and knowledge base.</p></li>
+        <li><h3>Resolve the request</h3><p>The assistant reads business-scoped information and calls tools for menu items, availability, and delivery zones.</p></li>
+        <li><h3>Confirm and hand off</h3><p>Order tools carry confirmed details into merchant operations, where staff can track fulfillment.</p></li>
+      </ol>
+      <p>The repository has a NestJS API, a merchant console, and a separate customer-facing Next.js app. The assistant uses application tools for live business data such as menus, delivery zones, and order status.</p>
+    </section>
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to all work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A marketplace project in development. A home-services marketplace with automated AI triage and worker matching.">
+  <title>HandyLink | Khodor El Hajj Moussa</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/handylink.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="HandyLink | Khodor El Hajj Moussa">
+  <meta property="og:description" content="A marketplace project in development. A home-services marketplace with automated AI triage and worker matching.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/handylink.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/handylink.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HandyLink marketplace case study">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HandyLink | Khodor El Hajj Moussa">
+  <meta name="twitter:description" content="A marketplace project in development. A home-services marketplace with automated AI triage and worker matching.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/handylink.jpg">
+  <meta name="twitter:image:alt" content="HandyLink marketplace case study">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="case-exhibits.js" defer></script>
+  <script src="page-back.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">All work</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell case-layout">
+    <header class="case-intro"><h1>HandyLink<span>.</span></h1><p class="role">Marketplace · In development</p><p class="case-hook">A marketplace for finding and booking local service workers</p><p>I’m developing HandyLink as a marketplace project. It brings worker discovery, job posts, bids, bookings, messaging, and verification into one platform. I also worked on the automated AI workflow for triage and specialist matching.</p></header>
+    <section class="artifact artifact--wide-media" aria-labelledby="handylink-ui">
+      <h2 id="handylink-ui">Inside the marketplace</h2>
+      <div class="case-exhibit" data-exhibit>
+        <div class="case-controls" role="group" aria-label="Screenshots" hidden>
+          <button type="button" aria-controls="handylink-view-0" aria-pressed="true">Marketplace home</button>
+          <button type="button" aria-controls="handylink-view-1" aria-pressed="false">Post a job</button>
+        </div>
+        <p class="sr-only" role="status"></p>
+        <figure class="case-view case-screen" id="handylink-view-0">
+          <div class="case-frame"><a href="assets/cases/handylink-home.webp"><img src="assets/cases/handylink-home.webp" width="1440" height="512" loading="lazy" alt="HandyLink landing page showing service categories and worker discovery"></a></div>
+          <figcaption>Actual development capture. The landing page introduces service categories and worker discovery.</figcaption>
+        </figure>
+        <figure class="case-view case-screen" id="handylink-view-1">
+          <div class="case-frame"><a href="assets/cases/handylink-job.webp"><img src="assets/cases/handylink-job.webp" width="1210" height="767" loading="lazy" alt="HandyLink job form with fields for category, description, budget, and location"></a></div>
+          <figcaption>Cropped development capture of the job-posting form. Customers can describe work and set a budget before requesting bids.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="artifact" aria-labelledby="handylink-ai">
+      <h2 id="handylink-ai">How automated triage works</h2>
+      <p>Explore two sample paths through the AI and the marketplace backend.</p>
+      <div class="case-exhibit" data-exhibit>
+        <div class="case-controls" role="group" aria-label="Triage scenarios" hidden>
+          <button type="button" aria-controls="triage-worker" aria-pressed="true">Worker request</button>
+          <button type="button" aria-controls="triage-handoff" aria-pressed="false">Safety handoff</button>
+        </div>
+        <p class="sr-only" role="status"></p>
+        <figure class="case-view" id="triage-worker">
+          <ol class="process-strip">
+        <li><h3>Collect context</h3><p>Use the reported issue, service category, and district.</p></li>
+        <li><h3>Check eligibility</h3><p>Reassess on the server and look for a matching worker who is available and verified.</p></li>
+        <li><h3>Request help</h3><p>The customer chooses a worker and sends an expiring request for that worker to accept.</p></li>
+      </ol>
+          <figcaption>Illustrative workflow. The request requires a customer action and worker acceptance.</figcaption>
+        </figure>
+        <figure class="case-view" id="triage-handoff">
+          <ol class="process-strip">
+        <li><h3>Screen the report</h3><p>Deterministic checks identify higher-risk descriptions before worker matching.</p></li>
+        <li><h3>Escalate</h3><p>The model can raise the risk level. It cannot bypass the server’s safety decision.</p></li>
+        <li><h3>Stop matching</h3><p>The interface directs the customer to official services instead of opening a worker request.</p></li>
+      </ol>
+          <figcaption>Illustrative workflow. No contact, request, or dispatch occurs in this exhibit.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="case-decision" aria-labelledby="handylink-system">
+      <h2 id="handylink-system">Across the system</h2>
+      <ol class="process-strip">
+        <li><h3>Marketplace</h3><p>A bilingual Next.js interface covers discovery, job posts, bookings, and conversations.</p></li>
+        <li><h3>Transactions and trust</h3><p>A NestJS API with PostgreSQL manages marketplace state, including rescheduling, disputes, and identity-review workflows.</p></li>
+        <li><h3>AI services</h3><p>A separate FastAPI service supports chat, recommendations, price estimates, and advisory fraud signals.</p></li>
+      </ol>
+      <p>Development captures and simulated workflows show the current project. HandyLink is still in development.</p>
+    </section>
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to all work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>

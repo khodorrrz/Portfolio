@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Private PDF chat with traceable answers. A project by Khodor El Hajj Moussa.">
+  <title>RAG Document Assistant | Khodor El Hajj Moussa</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/rag.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="RAG Document Assistant | Khodor El Hajj Moussa">
+  <meta property="og:description" content="Private PDF chat with traceable answers. A project by Khodor El Hajj Moussa.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/rag.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/rag.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="RAG Document Assistant case study">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RAG Document Assistant | Khodor El Hajj Moussa">
+  <meta name="twitter:description" content="Private PDF chat with traceable answers. A project by Khodor El Hajj Moussa.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/rag.jpg">
+  <meta name="twitter:image:alt" content="RAG Document Assistant case study">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="case-exhibits.js" defer></script>
+  <script src="page-back.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">All work</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell case-layout">
+    <header class="case-intro"><h1>RAG Document Assistant<span>.</span></h1><p class="role">Applied AI</p><p class="case-hook">Private PDF chat with traceable answers</p><p>I built a React and FastAPI application that indexes PDFs asynchronously and answers questions from retrieved passages.</p><p><a href="https://github.com/khodorrrz/Rag-System">View source on GitHub</a> · <a href="index.html#lab">Run the sample request</a></p></header>
+    <section class="artifact">
+      <h2>From indexed PDF to cited answer</h2>
+      <div class="case-exhibit" data-exhibit>
+        <div class="case-controls" role="group" aria-label="Exhibit views" hidden>
+          <button type="button" aria-controls="rag-view-0" aria-pressed="true">Document index</button>
+          <button type="button" aria-controls="rag-view-1" aria-pressed="false">Cited answer</button>
+        </div>
+        <p class="sr-only" role="status"></p>
+        <figure class="case-view case-screen " id="rag-view-0">
+          <div class="case-frame"><a href="rag-index.webp"><img src="rag-index.webp" width="1481" height="739" loading="lazy" alt="Document library with a PDF marked ready after indexing"></a></div>
+          <figcaption>The worker parses and indexes uploaded documents. A document becomes searchable once indexing finishes.</figcaption>
+        </figure>
+        <figure class="case-view case-screen " id="rag-view-1">
+          <div class="case-frame"><a href="rag-answer.webp"><img src="rag-answer.webp" width="1471" height="743" loading="lazy" alt="Document chat showing an answer and its source citations"></a></div>
+          <figcaption>The chat uses retrieved passages to answer. Citations come from the retrieved document metadata and point readers back to the evidence.</figcaption>
+        </figure>
+      </div>
+      <p class="artifact-label">Architecture walkthrough</p>
+      <div class="artifact-steps"><article class="artifact-step"><h3><span>01</span>Index</h3><p>A Redis-backed worker parses and embeds documents.</p></article>
+      <article class="artifact-step"><h3><span>02</span>Retrieve</h3><p>Combine keyword and vector results within the user's document scope.</p></article>
+      <article class="artifact-step"><h3><span>03</span>Rerank</h3><p>Score the candidate passages and apply the threshold.</p></article>
+      <article class="artifact-step"><h3><span>04</span>Cite</h3><p>Build the answer from retrieved evidence and attach backend-controlled citations.</p></article></div>
+    </section>
+    <section class="case-decision"><h2>Engineering notes</h2><p>The indexer parses and chunks PDFs, then stores embeddings in pgvector. At query time, hybrid search and reranking select evidence from the authenticated user's documents. Backend-controlled citations tie answers to retrieved passages.</p></section>
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to all work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn suspected weaknesses into verifiable findings. A project by Khodor El Hajj Moussa.">
+  <title>Security Agent | Khodor El Hajj Moussa</title>
+  <meta name="author" content="Khodor El Hajj Moussa">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://portfolio-omega-gules-27.vercel.app/security.html">
+  <link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khodor El Hajj Moussa">
+  <meta property="og:title" content="Security Agent | Khodor El Hajj Moussa">
+  <meta property="og:description" content="Turn suspected weaknesses into verifiable findings. A project by Khodor El Hajj Moussa.">
+  <meta property="og:url" content="https://portfolio-omega-gules-27.vercel.app/security.html">
+  <meta property="og:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/security.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Security Agent case study">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Security Agent | Khodor El Hajj Moussa">
+  <meta name="twitter:description" content="Turn suspected weaknesses into verifiable findings. A project by Khodor El Hajj Moussa.">
+  <meta name="twitter:image" content="https://portfolio-omega-gules-27.vercel.app/assets/og/security.jpg">
+  <meta name="twitter:image:alt" content="Security Agent case study">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="security-trace.js" defer></script>
+  <script src="page-back.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead"><a class="back-link" href="index.html#work"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Back to portfolio</a><nav aria-label="Primary"><a href="index.html#work">All work</a><a href="resume.html">CV</a><a href="contact.html">Contact</a></nav></header>
+  <main id="main" class="shell case-layout">
+    <header class="case-intro"><h1>Security Agent<span>.</span></h1><p class="role">Security tooling</p><p class="case-hook">Turn suspected weaknesses into verifiable findings</p><p>I built a report-only security review engine with a 22-phase dependency graph. It inventories a target, investigates candidates, verifies evidence, and builds a report from a structured findings ledger.</p></header>
+
+    <section class="security-lab" aria-labelledby="trace-heading">
+      <div class="security-lab-heading">
+        <div><h2 id="trace-heading">Follow a finding</h2><p>Choose a sample case, then scroll from the first clue to the final report.</p></div>
+        <span>FIXTURE SIMULATION</span>
+      </div>
+      <div class="security-controls" hidden>
+        <div class="case-controls security-scenarios" role="group" aria-label="Fixture route">
+          <button type="button" data-scenario="invoice" aria-pressed="true">Invoice route</button>
+          <button type="button" data-scenario="receipt" aria-pressed="false">Receipt route</button>
+          <button type="button" data-scenario="duplicate" aria-pressed="false">Severity dispute</button>
+        </div>
+      </div>
+      <p class="sr-only" role="status" id="security-status"></p>
+      <div class="security-walkthrough" hidden>
+        <nav class="security-flow" aria-label="Pipeline checkpoints">
+          <div class="security-flow-heading"><strong>Pipeline map</strong><span id="security-counter" aria-hidden="true">01 / 06</span></div>
+          <div class="security-progress" aria-hidden="true"></div>
+          <p class="security-current"><span data-current-index>01</span> · <span data-current-title>Inventory</span></p>
+          <div class="security-lane">
+            <h3>Discovery <span>12 phases</span></h3>
+            <ol class="security-steps">
+              <li><button type="button" data-checkpoint><span>01</span><span>Inventory</span></button></li>
+              <li><button type="button" data-checkpoint><span>02</span><span>Find candidates</span></button></li>
+            </ol>
+          </div>
+          <div class="security-lane">
+            <h3>Verification <span>6 phases</span></h3>
+            <ol class="security-steps" start="3">
+              <li><button type="button" data-checkpoint><span>03</span><span>Trace reachability</span></button></li>
+              <li><button type="button" data-checkpoint><span>04</span><span>Blind review</span></button></li>
+            </ol>
+          </div>
+          <div class="security-lane">
+            <h3>Reporting <span>4 phases</span></h3>
+            <ol class="security-steps" start="5">
+              <li><button type="button" data-checkpoint><span>05</span><span>Reconcile ledger</span></button></li>
+              <li><button type="button" data-checkpoint><span>06</span><span>Derive report</span></button></li>
+            </ol>
+          </div>
+        </nav>
+        <div class="security-story">
+          <p class="security-fixture"><code id="security-route"></code></p>
+          <ol class="security-chapters" aria-label="Checkpoint details"></ol>
+          <template id="security-chapter">
+            <li class="security-chapter">
+              <div class="security-panel" tabindex="-1">
+                <div class="security-panel-meta"><span data-phase></span><span data-state></span></div>
+                <h3></h3>
+                <p data-detail></p>
+                <pre hidden><code></code></pre>
+                <p class="security-result" hidden><span>Report outcome</span><strong></strong></p>
+              </div>
+            </li>
+          </template>
+        </div>
+      </div>
+      <p class="security-note">Expected fixture outcomes. The invoice query lacks owner scoping and produces an expected IDOR finding. The receipt query includes the owner and produces no expected IDOR finding. An unresolved severity dispute holds the report.</p>
+    </section>
+
+    <section class="artifact security-architecture" aria-labelledby="architecture-title">
+      <h2 id="architecture-title">The full 22-phase pipeline</h2>
+      <p>The lifecycle file defines phase dependencies and when a phase may run. Completion checks validate required outputs before the engine advances.</p>
+      <div class="security-phase-grid">
+        <section><h3>Discovery <span>12 phases</span></h3><p>A shared inventory maps routes, middleware, and sinks. Hunters use it to investigate candidates.</p>
+          <details><summary>View discovery phases</summary><ol><li>Tool scan</li><li>Attack tree</li><li>Surface plan</li><li>Baseline</li><li>Domain hunters</li><li>API auth boundary</li><li>Systemic patterns</li><li>Audit write review</li><li>Audit read review</li><li>Frontend surface</li><li>Business logic deep</li><li>Frontend deep</li></ol></details>
+        </section>
+        <section><h3>Verification <span>6 phases</span></h3><p>Reachability and blind review challenge the evidence. Live checks depend on explicit scope and authorization.</p>
+          <details><summary>View verification phases</summary><ol><li>Cross verify</li><li>Live exploit</li><li>Dynamic probe</li><li>Exploit chaining</li><li>Custom exploits</li><li>Final verify</li></ol></details>
+        </section>
+        <section><h3>Reporting <span>4 phases</span></h3><p>Reconciliation resolves duplicates and disputes. Aggregation derives the report totals from active ledger entries.</p>
+          <details><summary>View reporting phases</summary><ol><li>Gap analysis</li><li>Reconcile</li><li>Aggregate</li><li>Finalize</li></ol></details>
+        </section>
+      </div>
+    </section>
+    <section class="case-decision"><h2>Engineering notes</h2><p>Discovery and verification happen before aggregation. A finding can carry reachability evidence, redacted artifacts and an OWASP ASVS mapping. The project is private research.</p></section>
+  </main>
+  <footer class="shell footer"><a href="index.html#work">Back to all work</a><a href="contact.html">Email Khodor</a></footer>
+</body>
+</html>
